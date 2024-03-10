@@ -11,6 +11,10 @@
     <!-- Logo -->
     <link rel="icon" type="image/x-icon" href="src/img/logo-sekasia.png" />
 
+
+    <!-- JavaSCRIPT AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!-- Tailwind Config -->
     <script>
       tailwind.config = {
@@ -21,8 +25,8 @@
               league: ['"League Spartan", "sans-serif"'],
             },
             colors: {
-              sekasia: '#4E9258',
-              sekasiadark: '#52b788',
+              sekasia: '#163020',
+              sekasiadark: 'black',
               
             },
           },
@@ -46,7 +50,7 @@
     <!-- Navbar start -->
 
     <header class="w-full">
-      <nav class="bg-white py-2.5 dark:bg-emerald-900">
+      <nav class="bg-white py-2.5 dark:bg-sekasiadark">
         <div
           class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto"
         >
@@ -61,10 +65,10 @@
               >SEKASIA<span class="text-green-700">.</span>
             </span>
           </a>
+          <div class="ham-menu lg:hidden"><i class="text-3xl text-white uil uil-bars"></i></div>
 
           <div
-            class="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1"
-            id="mobile-menu-2"
+            class="items-center justify-between hidden text-center w-full lg:flex lg:w-auto lg:order-1"
           >
             <ul
               class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0"
@@ -80,14 +84,31 @@
               <li>
                 <a
                   href="#"
-                  class="block py-2 pl-3 pr-4 text-gray-600 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-emerald-500 lg:p-0 dark:text-white lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-                  >Services</a
+                  class="flex justify-center items-center py-2 pl-3 pr-4 text-gray-600 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-emerald-500 lg:p-0 dark:text-white lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                  >Services <i class="uil uil-angle-down"></i></a
                 >
               </li>
+              
               <li>
                 <a
                   href="#"
-                  class="block py-2 pl-3 pr-4 text-gray-600 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-emerald-500 lg:p-0 dark:text-white lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                  class="flex py-2 pl-3 pr-4 text-gray-600 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-emerald-500 lg:p-0 dark:text-white lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                  >Program  <i class="uil uil-angle-down"></i></a
+                >
+              </li>
+              
+              <li>
+                <a
+                  href="#"
+                  class="flex py-2 pl-3 pr-4 text-gray-600 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-emerald-500 lg:p-0 dark:text-white lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                  >Partners <i class="uil uil-angle-down"></i></a
+                >
+              </li>
+              
+              <li>
+                <a
+                  href="#"
+                  class=" py-2 pl-3 pr-4 text-gray-600 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-emerald-500 lg:p-0 dark:text-white lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
                   >About</a
                 >
               </li>
@@ -112,10 +133,10 @@
     </header>
 
     <!-- Start Hero -->
-    <section class="bg-cover bg-center bg-no-repeat lg:bg-white dark:bg-black" style="background-image: url(src/img/building.JPG);">
-      <div class="bg-opacity-90 lg:bg-white bg-white dark:bg-emerald-900 dark:bg-opacity-90 w-full py-10 lg:py-0">
+    <section class="bg-cover bg-center bg-no-repeat lg:bg-white dark:bg-black dark:lg:bg-white" style="background-image: url(src/img/building.JPG);">
+      <div class="bg-opacity-90 lg:bg-white bg-white dark:lg:bg-black dark:bg-black dark:bg-opacity-90 w-full py-10 lg:py-0">
       <div class="flex gap-5 lg:mt-0 mt-0 mx-16 ml-7 mr-3 lg:mr-0 lg:ml-14">
-        <div class="mr-auto place-self-center lg:col-span-7">
+        <div class="mr-auto place-self-center lg:col-span-7" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
           <h1
             class="max-w-2xl text-6xl font-extrabold leading-none text-emerald-500 tracking-tight md:text-7xl xl:text-8xl dark:text-white"
           >
@@ -150,7 +171,7 @@
     
     <!-- Start Vision -->
     <section class="bg-emerald-800 dark:bg-sekasia lg:mt-0 font-league text-white">
-      <div class="w-full p-16 text-5xl text-center">
+      <div class="w-full p-16 text-5xl text-center" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
         <i class="text-3xl uil uil-eye"></i>
         <h1 class="font-bold pb-5">VISION</h1>
         <p class="font-semibold text-sm lg:text-2xl md:text-xl">
@@ -162,11 +183,11 @@
     <!-- End Vision -->
 
     <!-- Start Services -->
-    <section class="flex w-full justify-center font-poppins dark:bg-gray-800 dark:text-white">
+    <section class="flex w-full justify-center font-poppins dark:bg-sekasiadark dark:text-white">
       <div class="container mt-12 mx-12 lg:mx-20">
         <div class="flex flex-wrap -mx-4">
           <div class="w-full px-4">
-            <div class="text-center mx-auto mb-8 lg:mb-12 max-w-[510px]">
+            <div class="text-center mx-auto mb-8 lg:mb-12 max-w-[510px]" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000">
               <h2
                 class="font-bold text-3xl sm:text-4xl md:text-[40px] text-dark mb-4"
               >
@@ -182,7 +203,7 @@
         <div class="flex flex-wrap -mx-4">
           <div class="w-full md:w-1/2 lg:w-1/3 px-4">
             <div
-              class="p-10 md:px-7 xl:px-10 rounded-[20px] dark:bg-gray-800 bg-white shadow-md dark:shadow-gray-400 hover:shadow-lg hover:shadow-gray-500 mb-8"
+              class="p-10 md:px-7 xl:px-10 rounded-[20px] dark:bg-sekasiadark bg-white shadow-md dark:shadow-gray-400 hover:shadow-lg hover:shadow-gray-500 mb-8"
             >
               <div
                 class="w-[70px] h-[70px] flex items-center justify-center bg-primary rounded-2xl mb-8"
@@ -199,7 +220,7 @@
           </div>
           <div class="w-full md:w-1/2 lg:w-1/3 px-4">
             <div
-              class="p-10 md:px-7 xl:px-10 rounded-[20px] dark:bg-gray-800 bg-white shadow-sm dark:shadow-gray-400 hover:shadow-lg hover:shadow-gray-500 mb-8"
+              class="p-10 md:px-7 xl:px-10 rounded-[20px] dark:bg-sekasiadark bg-white shadow-md dark:shadow-gray-400 hover:shadow-lg hover:shadow-gray-500 mb-8"
             >
               <div
                 class="w-[70px] h-[70px] flex items-center justify-center bg-primary rounded-2xl mb-8"
@@ -216,7 +237,7 @@
           </div>
           <div class="w-full md:w-1/2 lg:w-1/3 px-4">
             <div
-              class="p-10 md:px-7 xl:px-10 rounded-[20px] dark:bg-gray-800 bg-white shadow-sm dark:shadow-gray-400 hover:shadow-lg hover:shadow-gray-500 mb-8"
+              class="p-10 md:px-7 xl:px-10 rounded-[20px] dark:bg-sekasiadark bg-white shadow-md dark:shadow-gray-400 hover:shadow-lg hover:shadow-gray-500 mb-8"
             >
               <div
                 class="w-[70px] h-[70px] flex items-center justify-center bg-primary rounded-2xl mb-8"
@@ -233,7 +254,7 @@
           </div>
           <div class="w-full md:w-1/2 lg:w-1/3 px-4">
             <div
-              class="p-10 md:px-7 xl:px-10 rounded-[20px] dark:bg-gray-800 bg-white shadow-sm dark:shadow-gray-400 hover:shadow-lg hover:shadow-gray-500 mb-8"
+              class="p-10 md:px-7 xl:px-10 rounded-[20px] dark:bg-sekasiadark bg-white shadow-md dark:shadow-gray-400 hover:shadow-lg hover:shadow-gray-500 mb-8"
             >
               <div
                 class="w-[70px] h-[70px] flex items-center justify-center bg-primary rounded-2xl mb-8"
@@ -255,8 +276,8 @@
 
     
     <!-- Start Mission -->
-    <section class="bg-emerald-800 dark:bg-sekasia lg:mt-5 font-league text-white">
-        <div class="w-full p-16 text-5xl text-center">
+    <section class="bg-emerald-800 dark:bg-sekasia font-league text-white">
+        <div class="w-full p-16 text-5xl text-center" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
           <i class="text-3xl uil uil-crosshair-alt"></i>
           <h1 class="font-bold pb-5">MISSION</h1>
           <p class="font-semibold text-sm lg:text-2xl md:text-xl">
@@ -268,9 +289,9 @@
 
       
 <!-- Start Team -->
-    <section class="w-full ">
+    <section class="w-full overflow-hidden">
   <div class="flex items-center justify-center min-h-52 text-white font-poppins bg-center bg-no-repeat bg-cover" style="background-image: url(src/img/memberr.jpg);">
-    <div class="bg-white dark:bg-gray-800  md:bg-white w-full md:bg-opacity-70 flex justify-center">
+    <div class="bg-white dark:bg-sekasiadark md:bg-white w-full md:bg-opacity-70 flex justify-center">
     <div class="flex flex-col">
   
         <div class="flex flex-col mt-8">
@@ -294,7 +315,7 @@
                 <!-- Team Members -->
                 <div class="flex flex-wrap justify-center">
                     <!-- Member #1 -->
-                    <div class="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4">
+                    <div class="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4"  data-aos="fade-right" data-aos-delay="100" data-aos-duration="1500">
                         <div class="flex flex-col">
                             <!-- Avatar -->
                             <a href="#" class="mx-auto">
@@ -317,7 +338,7 @@
                         </div>
                     </div>
                     <!-- Member #4 -->
-                    <div class="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4">
+                    <div class="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4"  data-aos="fade-left" data-aos-delay="100" data-aos-duration="1500">
                         <div class="flex flex-col">
                             <!-- Avatar -->
                             <a href="#" class="mx-auto">
@@ -388,7 +409,7 @@
         <footer class="bg-white dark:bg-sekasia">
           <div class="container px-6 py-8 mx-auto">
               <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-4">
-                  <div class="sm:col-span-2">
+                  <div class="sm:col-span-2 rounded-md">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0078213285515!2d103.99534887363652!3d1.1549007621742375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d98b006e7434df%3A0xcbb99351ef2bcff9!2sPT.SEKASIA!5e0!3m2!1sen!2sid!4v1709817324202!5m2!1sen!2sid" class="w-full"></iframe>
                   </div>
       
@@ -427,5 +448,10 @@
           </div>
       </footer>
       </section>
+
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script>
+        AOS.init();
+      </script>
   </body>
 </html>
