@@ -8,31 +8,15 @@
     <!-- Output Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
 
+
+    <script defer src="app.js"></script>
+
     <!-- Logo -->
     <link rel="icon" type="image/x-icon" href="src/img/logo-sekasia.png" />
 
 
     <!-- JavaSCRIPT AOS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-    <!-- Tailwind Config -->
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              poppins: ['"Poppins", "sans-serif"'],
-              league: ['"League Spartan", "sans-serif"'],
-            },
-            colors: {
-              sekasia: '#163020',
-              sekasiadark: 'black',
-              
-            },
-          },
-        },
-      };
-    </script>
 
     <!-- Google Font -->
     <link
@@ -46,6 +30,7 @@
       href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
     />
   </head>
+
   <body>
     <!-- Navbar start -->
 
@@ -65,10 +50,10 @@
               >SEKASIA<span class="text-green-700">.</span>
             </span>
           </a>
-          <div class="ham-menu lg:hidden"><i class="text-3xl text-white uil uil-bars"></i></div>
+          <div class="lg:hidden" id="#ham-btn"><i class="text-3xl text-black cursor-pointer hover:text-gray-600 transition-colors uil uil-bars"></i></div>
 
-          <div
-            class="items-center justify-between hidden text-center w-full lg:flex lg:w-auto lg:order-1"
+          <div id="#nav-menu"
+            class="items-center justify-between text-center lg:flex lg:w-auto lg:order-1 hidden w-full"
           >
             <ul
               class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0"
@@ -81,37 +66,55 @@
                   >Home</a
                 >
               </li>
-              <li>
+
+              <li class="flex flex-col">
                 <a
-                  href="#"
-                  class="flex justify-center items-center py-2 pl-3 pr-4 text-gray-600 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-emerald-500 lg:p-0 dark:text-white lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-                  >Services <i class="uil uil-angle-down"></i></a
+                  href="#" id="#services"
+                  class="flex relative justify-center items-center py-2 pl-3 pr-4 text-emerald-700 border-b border-gray-100 hover:bg-gray-200 mt-0 lg:ml-0 ml-0 lg:hover:bg-transparent lg:border-0 lg:hover:text-emerald-500 lg:p-0 dark:text-white lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                  >Services<i class="uil uil-angle-down"></i></a
                 >
+                <ul id="#menu-services" class="lg:absolute z-10 text-center lg:mt-8 lg:bg-gray-100 lg:rounded-xl lg:p-3 justify-center hidden">
+                  <li class="bg-gray-100 lg:bg-white lg:text-emerald-500 lg:shadow-md p-2 text-gray-500 lg:hover:text-gray-600 hover:bg-gray-200 lg:px-5 lg:py-2 rounded-md mt-1"><a href="#">Education</a></li>
+                  <li class="bg-gray-100 lg:bg-white lg:text-emerald-500 lg:shadow-md p-2 text-gray-500 lg:hover:text-gray-600 hover:bg-gray-200 lg:px-5 lg:py-2 rounded-md mt-1"><a href="#">Work</a></li>
+                  <li class="bg-gray-100 lg:bg-white lg:text-emerald-500 lg:shadow-md p-2 text-gray-500 lg:hover:text-gray-600 hover:bg-gray-200 lg:px-5 lg:py-2 rounded-md mt-1"><a href="#">Together</a></li>
+                </ul>
               </li>
               
-              <li>
+              <li class="flex flex-col">
                 <a
-                  href="#"
-                  class="flex py-2 pl-3 pr-4 text-gray-600 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-emerald-500 lg:p-0 dark:text-white lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-                  >Program  <i class="uil uil-angle-down"></i></a
-                >
-              </li>
-              
-              <li>
-                <a
-                  href="#"
-                  class="flex py-2 pl-3 pr-4 text-gray-600 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-emerald-500 lg:p-0 dark:text-white lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                  href="#" id="#partners"
+                  class="flex relative justify-center items-center py-2  pl-3 pr-4 text-emerald-700 border-b border-gray-100 hover:bg-gray-200 mt-0 lg:ml-0 ml-0 lg:hover:bg-transparent lg:border-0 lg:hover:text-emerald-500 lg:p-0 dark:text-white lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
                   >Partners <i class="uil uil-angle-down"></i></a
                 >
+                <ul id="#menu-partners" class="lg:absolute z-10 text-center lg:mt-8 lg:bg-gray-100 lg:rounded-xl lg:p-3 justify-center hidden">
+                  <li class="bg-gray-100 lg:bg-white lg:text-emerald-500 lg:shadow-md p-2 text-gray-500 lg:hover:text-gray-600 hover:bg-gray-200 lg:px-5 lg:py-2 rounded-md mt-1"><a href="#">Education</a></li>
+                  <li class="bg-gray-100 lg:bg-white lg:text-emerald-500 lg:shadow-md p-2 text-gray-500 lg:hover:text-gray-600 hover:bg-gray-200 lg:px-5 lg:py-2 rounded-md mt-1"><a href="#">Work</a></li>
+                  <li class="bg-gray-100 lg:bg-white lg:text-emerald-500 lg:shadow-md p-2 text-gray-500 lg:hover:text-gray-600 hover:bg-gray-200 lg:px-5 lg:py-2 rounded-md mt-1"><a href="#">Together</a></li>
+                </ul>
+              </li>
+
+              
+              <li class="flex flex-col">
+                <a
+                  href="#" id="#clients"
+                  class="flex relative justify-center items-center py-2 pl-3 pr-4 text-emerald-700 border-b border-gray-100 hover:bg-gray-200 mt-0 lg:ml-0 ml-0 lg:hover:bg-transparent lg:border-0 lg:hover:text-emerald-500 lg:p-0 dark:text-white lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                  >Clients <i class="uil uil-angle-down"></i></a
+                >
+                <ul id="#menu-clients" class="lg:absolute z-10 text-center lg:mt-8 lg:bg-gray-100 lg:rounded-xl lg:p-3 justify-center hidden">
+                  <li class="bg-gray-100 lg:bg-white lg:text-emerald-500 lg:shadow-md p-2 text-gray-500 lg:hover:text-gray-600 hover:bg-gray-200 lg:px-5 lg:py-2 rounded-md mt-1"><a href="#">Education</a></li>
+                  <li class="bg-gray-100 lg:bg-white lg:text-emerald-500 lg:shadow-md p-2 text-gray-500 lg:hover:text-gray-600 hover:bg-gray-200 lg:px-5 lg:py-2 rounded-md mt-1"><a href="#">Work</a></li>
+                  <li class="bg-gray-100 lg:bg-white lg:text-emerald-500 lg:shadow-md p-2 text-gray-500 lg:hover:text-gray-600 hover:bg-gray-200 lg:px-5 lg:py-2 rounded-md mt-1"><a href="#">Together</a></li>
+                </ul>
               </li>
               
               <li>
                 <a
                   href="#"
-                  class=" py-2 pl-3 pr-4 text-gray-600 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-emerald-500 lg:p-0 dark:text-white lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                  class="block py-2 pl-3 pr-4 text-gray-600 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-emerald-500 lg:p-0 dark:text-white lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
                   >About</a
                 >
               </li>
+
               <li>
                 <a
                   href="#"
@@ -181,6 +184,29 @@
       </div>
     </section>
     <!-- End Vision -->
+
+    <section class="bg-white dark:bg-sekasiadark w-full font-poppins">
+      <div class="p-12 w-full flex lg:flex-row flex-col  justify-center">
+        <div class="lg:w-1/2 w-full"><img class="rounded-xl" src="src/img/work.png" alt=""></div>'
+        '
+        <div class="lg:w-1/2 w-full p-2">
+          <h1 class=" text-4xl lg:my-12 my-10 md:text-6xl font-bold text-left lg:text-right">Bagaimana cara kerja SEKASIA?</h1>
+
+          <div class="w-full p-3 shadow-lg lg:px-5 lg:mx-3 my-3 rounded-md pt-5">
+
+            <div class="flex w-full justify-between items-center">
+              
+              <h2 class="lg:text-4xl text-2xl font-semibold lg:mb-2">What Sekasia Is? </h2>
+              <button class="text-3xl font-semibold"><i class="uil uil-minus-circle"></i></button>
+            </div>
+            <p class="mx-2 lg:text-xl text-sm mt-3">SEKASIA adalah perusahaan dengan para profesional muda yang antusias dan dibimbing oleh para profesional senior, namun kami lebih suka menyebut diri kami sebagai pemberi kerja. Kandidat sebenarnya dipekerjakan oleh kami. </p>
+
+          </div>
+          
+
+        </div>
+      </div>
+    </section>
 
     <!-- Start Services -->
     <section class="flex w-full justify-center font-poppins dark:bg-sekasiadark dark:text-white">
@@ -405,6 +431,8 @@
 <!-- End Contact Us -->
 
 
+
+
       <section class="bg-white">
         <footer class="bg-white dark:bg-sekasia">
           <div class="container px-6 py-8 mx-auto">
@@ -448,7 +476,6 @@
           </div>
       </footer>
       </section>
-
       <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
       <script>
         AOS.init();
