@@ -7,10 +7,10 @@ const menuServices = document.getElementById("#menu-services");
 
 
 services.addEventListener('click', (e)=> {
-    if(menuServices.classList.contains('hidden')) {
-        menuServices.classList.remove('hidden');
+    if(menuServices.classList.contains('md:hidden')) {
+        menuServices.classList.remove('md:hidden');
     } else {
-        menuServices.classList.add('hidden');
+        menuServices.classList.add('md:hidden');
     }
 })
 

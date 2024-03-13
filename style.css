@@ -1,0 +1,11 @@
+.service-dropdown:hover ~ .service {
+    visibility: visible;
+    opacity: 100;
+    display: block;
+}
+
+.service:hover {
+    visibility: visible;
+    opacity: 100;
+    display: block;
+}
